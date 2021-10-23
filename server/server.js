@@ -6,6 +6,10 @@ require('dotenv').config()
 const Expenses = require('./models/Expense')
 const { json } = require('body-parser')
 
+//GET ROUTES
+const userRouter = require('./routes/users')
+app.use('/users',userRouter)
+
 //MIDDLEWARES
 app.use(express.json())
 
