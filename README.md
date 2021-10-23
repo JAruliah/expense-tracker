@@ -8,9 +8,9 @@ Project was made using the MERN stack. Authentication is setup using bcrypt to h
 
 ## Things to do
 
-- [x] Initialize Project
-- [x] Create Basic API Routes
-- [x] Add Authentication
+- [x] ~Initialize Project~
+- [x] ~Create Basic API Routes~
+- [x] ~Add Authentication~
 - [ ] Design Front End Wireframe
 - [ ] Create React App
 - [ ] Make Register Page
