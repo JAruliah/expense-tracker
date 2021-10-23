@@ -1,18 +1,19 @@
 # Expense Tracker
 
-This is an expense and income tracker
+This is an expense and income tracker, users are able to add and remove expenses and income. Expense totals will be calculated and displayed.
 
 ## Description
 
-Project was made using the MERN stack. Authentication is setup using bcrypt to hash passwords for added security. Users will be able to register and login. 
+Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user will have access to their own expenses and income.
 
 ## Things to do
 
-- [x] ~Initialize Project~
-- [x] ~Create Basic API Routes~
-- [x] ~Add Authentication~
+- [x] ~Initialize project, setup database~
+- [x] ~Add GET, POST and DELETE for expenses~
+- [x] ~Add register and login API routes~
+- [x] ~Implement password hashing~
 - [ ] Design Front End Wireframe
-- [ ] Create React App
+- [ ] Setup react app
 - [ ] Make Register Page
 - [ ] Make Login Page
 - [ ] Make Dashboard
