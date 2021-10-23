@@ -4,5 +4,15 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
-  }
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start":"node server.js"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for expense tracker",
+  "main": "server.js",
+  "author": "Jonathan Aruliah",
+  "license": "ISC"
 }
