@@ -29,6 +29,7 @@ npm run start
 - [x] ~Add register and login API routes~
 - [x] ~Implement password hashing~
 - [x] ~Add POST and DELETE for expenses~
+- [x] ~API testing, all routes working correctly~
 - [x] ~Design Front End Wireframe~ (Modified Template, created by: https://dribbble.com/Pragathesh)
 - [ ] Setup react app
 - [ ] Make Register Page

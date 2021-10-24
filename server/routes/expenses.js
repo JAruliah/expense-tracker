@@ -7,7 +7,7 @@ const Users = require('../models/User')
 const mongoose = require('mongoose')
 router.use(express.json())
 
-//Post expense in the user collections 
+//Post expense in the user collections given the email in req.body
 router.post('/', async (req,res) => {
     const expense = new Expenses({
         value:req.body.value,
@@ -15,7 +15,7 @@ router.post('/', async (req,res) => {
     })
     try{
         const userUpdate = await Users.updateOne({email:req.body.email},{$push:{expenses:expense}})
-        res.json(userUpdate)
+        res.json(userUpdate).send
     }catch(err){res.sendStatus(500)}
     
 })
@@ -23,7 +23,7 @@ router.post('/', async (req,res) => {
 router.delete('/:id',async (req,res)=>{
     try{
         const deletedExpense = await Users.updateOne({_id: req.params.id}, {$pull:{expenses:{_id: mongoose.Types.ObjectId(req.body._id)}}})
-        res.json(deletedExpense)
+        res.json(deletedExpense).send
     }catch(err){res.sendStatus(500)}
     
 })

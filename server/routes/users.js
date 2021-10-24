@@ -9,7 +9,7 @@ router.use(express.json())
 //ROUTES
 
 //Register
-router.post('/',  async (req,res) => {
+router.post('/register',  async (req,res) => {
     try{
         //Hash password
         const salt =  await bcrypt.genSalt()
