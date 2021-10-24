@@ -4,7 +4,6 @@ const { json } = require('body-parser')
 const { get } = require('mongoose')
 const bcrypt = require('bcryptjs')
 const Users = require('../models/User')
-
 router.use(express.json())
 
 //ROUTES
@@ -21,7 +20,8 @@ router.post('/',  async (req,res) => {
                 email:req.body.email, 
                 firstName:req.body.firstName,
                 lastName:req.body.lastName,
-                password:hashedPassword
+                password:hashedPassword,
+                expenses:{}
             }
         )
         //Save new user into database
@@ -30,7 +30,6 @@ router.post('/',  async (req,res) => {
     }catch(err){
         res.sendStatus(500)
     }
-
 })
 
 //Login
