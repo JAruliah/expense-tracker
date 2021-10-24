@@ -12,7 +12,7 @@ Project was made using the MERN stack. Users will be able to register and login.
 - [x] ~Add GET, POST and DELETE for expenses~
 - [x] ~Add register and login API routes~
 - [x] ~Implement password hashing~
-- [ ] Design Front End Wireframe
+- [x] ~Design Front End Wireframe~ (Modified Template, created by: https://dribbble.com/Pragathesh)
 - [ ] Setup react app
 - [ ] Make Register Page
 - [ ] Make Login Page
