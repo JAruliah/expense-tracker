@@ -49,8 +49,8 @@ npm start
 - [x] ~Add POST and DELETE for expenses~
 - [x] ~API testing, all routes working correctly~
 - [x] ~Design Front End Wireframe~ (Modified Template, created by: https://dribbble.com/Pragathesh)
-- [x] Setup react app
-- [x] Register page functionality
+- [x] ~Setup react app~
+- [x] ~Register page functionality~
 - [ ] Login page functionality
 - [ ] Protected route to dashboard
 - [ ] Dashboard functionality
