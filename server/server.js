@@ -4,6 +4,8 @@ const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config()
 const { json } = require('body-parser')
+const cors = require("cors")
+app.use(cors())
 
 //MIDDLEWARES
 app.use(express.json())

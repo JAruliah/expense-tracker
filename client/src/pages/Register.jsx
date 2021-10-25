@@ -1,9 +1,13 @@
 import React from "react";
 import Header from "../components/Register/Header";
+import Form from "../components/Register/Form";
 
 function Register(){
     return (
-        <Header />
+        <div>
+            <Header />
+            <Form />
+        </div>
     )
 }
 

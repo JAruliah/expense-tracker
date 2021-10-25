@@ -9,20 +9,38 @@ Project was made using the MERN stack. Users will be able to register and login.
 ## Getting Started
 
 ### Installing/Setup
-
-* .env must be setup with your database connection information 
-* to install all dependencies run:
+#### Server 
+* Inside of server folder .env file must be created with contents as follows: DB_CONNECTION="Your database connection"
+* to install all server dependencies run:
 ```
+cd server
+npm install
+```
+#### Client
+* to install all client dependencies run:
+```
+cd ../client
 npm install
 ```
 
 ### Executing program
+#### Server
 
 * To start the server run:
 
 ```
+cd ../server
 npm run start
 ```
+
+#### Client
+* To start react run:
+
+```
+cd ../client
+npm start
+```
+
 ## Things to do
 
 - [x] ~Initialize project, setup database~
@@ -31,7 +49,11 @@ npm run start
 - [x] ~Add POST and DELETE for expenses~
 - [x] ~API testing, all routes working correctly~
 - [x] ~Design Front End Wireframe~ (Modified Template, created by: https://dribbble.com/Pragathesh)
-- [ ] Setup react app
-- [ ] Make Register Page
-- [ ] Make Login Page
-- [ ] Make Dashboard
+- [x] Setup react app
+- [x] Register page functionality
+- [ ] Login page functionality
+- [ ] Protected route to dashboard
+- [ ] Dashboard functionality
+- [ ] Style register page
+- [ ] Style login page
+- [ ] Style dashboard page
