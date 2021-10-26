@@ -51,9 +51,13 @@ npm start
 - [x] ~Design Front End Wireframe~ (Modified Template, created by: https://dribbble.com/Pragathesh)
 - [x] ~Setup react app~
 - [x] ~Register page functionality~
-- [ ] Login page functionality
-- [ ] Protected route to dashboard
-- [ ] Dashboard functionality
+- [x] ~Login page functionality~
+- [x] ~Protected route to dashboard~
+- [x] ~Dashboard calculate expenses~
+- [x] ~Dashboard add expenses~
+- [x] ~Dashboard delete expenses~
+- [x] ~Dashboard display expenses~
+- [ ] Testing and optimizing
 - [ ] Style register page
 - [ ] Style login page
 - [ ] Style dashboard page
