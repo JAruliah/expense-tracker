@@ -24,8 +24,7 @@ function App() {
     localStorage.removeItem('id');
     window.localStorage.setItem('auth',JSON.stringify(false));
     window.location.href="/"
-    
-  }
+    }
 
   return (
     <div className="App">
