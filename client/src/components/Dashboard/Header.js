@@ -12,12 +12,13 @@ function Header(props){
             if (item.value === undefined){
                 return false
             } else{
+                let expenseNum = parseFloat(item.value)
                 if (item.value < 0){
-                    expenses += item.value
+                    expenses += expenseNum
                     return false
                 }
                 else{
-                    income += item.value
+                    income += expenseNum
                     return false
                 }
         }
