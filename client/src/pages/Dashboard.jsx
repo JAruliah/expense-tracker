@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Header from "../components/Dashboard/Header";
 import AddExpense from "../components/Dashboard/AddExpense";
+import Expense from "../components/Dashboard/Expenses";
 
 
 function Dashboard(props){
@@ -22,15 +23,18 @@ function Dashboard(props){
         }, [])
         
 
-
-    
-
-  
-
     return (
         <div>
             <Header userName={userName} expenses={expenses}/>
             <AddExpense expenses={expenses} setExpenses={setExpenses}/>
+            {expenses === undefined ? null : expenses.map(item => {
+            if (item.value === undefined){
+                return false
+            } else{
+                
+                return <Expense key={item._id} expenseId={item._id} expenses={expenses} setExpenses={setExpenses} value={item.value} description={item.description}/>
+            }
+    })}
             <button onClick={props.handleLogout}>Logout</button>
         </div>
         

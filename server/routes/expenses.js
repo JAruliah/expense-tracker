@@ -19,13 +19,13 @@ router.get('/:id', async(req,res) => {
 })
 
 //Post expense in the user collections given the email in req.body
-router.post('/', async (req,res) => {
+router.post('/:id', async (req,res) => {
     const expense = new Expenses({
         value:req.body.value,
         description:req.body.description
     })
     try{
-        const userUpdate = await Users.updateOne({_id:mongoose.Types.ObjectId(req.body._id)},{$push:{expenses:expense}})
+        const userUpdate = await Users.updateOne({_id:mongoose.Types.ObjectId(req.params.id)},{$push:{expenses:expense}})
         res.json(userUpdate).send
     }catch(err){res.sendStatus(500)}
     

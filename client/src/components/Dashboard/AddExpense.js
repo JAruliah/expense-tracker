@@ -9,18 +9,20 @@ function AddExpense(props){
     //On submit POST data to api
     function submitHandler(event){
           event.preventDefault()
-          fetch('http://localhost:3001/expenses', {
+          fetch(`http://localhost:3001/expenses/${userId._id}`, {
               method:'POST',
               headers:{
                   'Content-Type': 'application/json'
               },
-              body: JSON.stringify({_id: userId._id,value:value, description: description})
+              body: JSON.stringify({value:value, description: description})
           })
           .then(response => {
-              props.setExpenses( () => [...props.expenses, {_id: userId._id,value:value, description: description}])
+              window.location.reload()
+            //   props.setExpenses( () => [...props.expenses, {value:value, description: description}])
             })
         
     }
+
 
     return(
         <form onSubmit={submitHandler}>
