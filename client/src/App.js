@@ -10,10 +10,10 @@ import Unauthorized from "./components/Unauthorized";
 function App() {
   // Set auth value 
   const auth = window.localStorage.getItem('auth')
-  const [logged, setLogged] = useState(auth)
+  let setAuth = (auth === 'true')
+  const [logged, setLogged] = useState(setAuth)
   //function to handle login
   const handleLogin = e => {
-    e.preventDefault()
     setLogged(true)
     window.localStorage.setItem('auth',JSON.stringify(true));
   }
@@ -21,14 +21,19 @@ function App() {
   const handleLogout = e => {
     e.preventDefault();
     setLogged(false);
+    localStorage.removeItem('id');
     window.localStorage.setItem('auth',JSON.stringify(false));
+    window.location.href="/"
+    
   }
 
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path ="/" handleLogin={handleLogin} render={props => <Login {...props} logged={logged.toString()} handleLogin={handleLogin}/>}/>
+        <Route exact path="/">
+          {logged ? <Redirect to="/dashboard" /> :  <Route exact path ="/" handleLogin={handleLogin} render={props => <Login {...props} logged={logged.toString()} handleLogin={handleLogin}/>}/> }
+        </Route>
           <Route exact path ="/register" component ={Register} />
           <ProtectedRoute exact path ="/dashboard" logged={logged} handleLogout={handleLogout} component ={Dashboard} />
           <Route eact path="/404" component={NotFoundPage} />
