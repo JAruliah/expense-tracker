@@ -7,6 +7,17 @@ const Users = require('../models/User')
 const mongoose = require('mongoose')
 router.use(express.json())
 
+
+router.get('/:id', async(req,res) => {
+    const user = await Users.find({_id:mongoose.Types.ObjectId(req.params.id)})
+    res.send({
+        firstName: user[0].firstName,
+        lastName:user[0].lastName,
+        expenses:user[0].expenses
+            
+    })
+})
+
 //Post expense in the user collections given the email in req.body
 router.post('/', async (req,res) => {
     const expense = new Expenses({
@@ -14,7 +25,7 @@ router.post('/', async (req,res) => {
         description:req.body.description
     })
     try{
-        const userUpdate = await Users.updateOne({email:req.body.email},{$push:{expenses:expense}})
+        const userUpdate = await Users.updateOne({_id:mongoose.Types.ObjectId(req.body._id)},{$push:{expenses:expense}})
         res.json(userUpdate).send
     }catch(err){res.sendStatus(500)}
     
@@ -22,7 +33,7 @@ router.post('/', async (req,res) => {
 //Delete the expense given the userid and expense id
 router.delete('/:id',async (req,res)=>{
     try{
-        const deletedExpense = await Users.updateOne({_id: req.params.id}, {$pull:{expenses:{_id: mongoose.Types.ObjectId(req.body._id)}}})
+        const deletedExpense = await Users.updateOne({_id: mongoose.Types.ObjectId(req.params.id)}, {$pull:{expenses:{_id: mongoose.Types.ObjectId(req.body._id)}}})
         res.json(deletedExpense).send
     }catch(err){res.sendStatus(500)}
     
