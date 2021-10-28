@@ -57,9 +57,9 @@ npm start
 - [x] ~Dashboard add expenses~
 - [x] ~Dashboard delete expenses~
 - [x] ~Dashboard display expenses~
-- [x] Adding more authentication
-- [x] Add classes for styling, clean up
-- [x] Testing and optimizing
+- [x] ~Adding validation~
+- [x] ~Add classes for styling, clean up~
+- [x] ~Testing and optimizing~
 - [ ] Style register page
 - [ ] Style login page
 - [ ] Style dashboard page
