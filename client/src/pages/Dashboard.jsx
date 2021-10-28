@@ -3,7 +3,6 @@ import Header from "../components/Dashboard/Header";
 import AddExpense from "../components/Dashboard/AddExpense";
 import Expense from "../components/Dashboard/Expense";
 
-
 function Dashboard(props){
         const [userName, setUserName] = useState("")
         const [expenses, setExpenses] = useState()
@@ -25,7 +24,7 @@ function Dashboard(props){
 
     return (
         <div className="dashboard">
-            <Header userName={userName} expenses={expenses}/>
+            <Header userName={userName} expenses={expenses} handleLogout={props.handleLogout} />
             <AddExpense expenses={expenses} setExpenses={setExpenses}/>
             {expenses === undefined ? null : expenses.map(item => {
             if (item.value === undefined){
@@ -35,9 +34,8 @@ function Dashboard(props){
                 return <Expense key={item._id} expenseId={item._id} expenses={expenses} setExpenses={setExpenses} value={item.value} description={item.description}/>
             }
     })}
-            <button onClick={props.handleLogout}>Logout</button>
         </div>
-        
+
     )
 }
 

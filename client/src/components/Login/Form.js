@@ -8,7 +8,7 @@ function Form(props){
     //On submit POST data to api
     function submitHandler(event){
         event.preventDefault()
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if ( re.test(email) ) {
             fetch('http://localhost:3001/users/login', {
@@ -46,8 +46,8 @@ function Form(props){
 
     return(
         <form onSubmit={submitHandler}>
-            <input placeholder="Email Address" type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autocomplete="off" required/>
-            <input placeholder="Password" type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autocomplete="off" required/>
+            <input placeholder="Email Address" type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off" required/>
+            <input placeholder="Password" type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="off" required/>
             <label><input type="checkbox" onClick={clickHandler} />Show Password</label>
             <button>Login</button>
             <p name="message">{message}</p>

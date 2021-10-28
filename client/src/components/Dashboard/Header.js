@@ -8,6 +8,7 @@ function Header(props){
         // Get values depending on negative or positive, seperate them into expenses and income
         <header>
             <h1>Hey,{props.userName}</h1>
+            <button onClick={props.handleLogout}>Logout</button>
             {props.expenses === undefined ? null : props.expenses.map(item => {
             if (item.value === undefined){
                 return false
