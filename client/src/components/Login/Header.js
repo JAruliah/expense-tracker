@@ -3,11 +3,11 @@ import Navbar from "./Navbar";
 
 function Header(){
     return (
-        <div>
+        <header>
             <h1>Welcome</h1>
             <Navbar />
 
-        </div>
+        </header>
     )
 }
 

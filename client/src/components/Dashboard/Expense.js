@@ -20,11 +20,9 @@ function Expense(props){
 
     return (
         <div className="expense">
-            <div>
-            {props.value < 0? <h4 style={{color:'red'}}>{props.value}</h4>:<h4 style={{color:'green'}}>{props.value}</h4>}
+            {props.value < 0? <h4 style={{color:'#FF4B4B'}}>${props.value}</h4>:<h4 style={{color:'#00AD35'}}>${props.value}</h4>}
             <p>{props.description}</p>
-            </div>
-            <button onClick={clickHandler} className="delete">Delete</button>
+            <button onClick={clickHandler} className="delete">X</button>
         </div>
     )
 }

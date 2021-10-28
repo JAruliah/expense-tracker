@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 import NotFoundPage from './pages/404'
 import ProtectedRoute from "./components/ProtectedRoute";
 import Unauthorized from "./components/Unauthorized";
+import './styles/App.css'
 
 function App() {
   // Set auth value 

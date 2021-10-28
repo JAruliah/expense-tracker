@@ -60,6 +60,11 @@ npm start
 - [x] ~Adding validation~
 - [x] ~Add classes for styling, clean up~
 - [x] ~Testing and optimizing~
-- [ ] Style register page
-- [ ] Style login page
-- [ ] Style dashboard page
+- [x] ~Style register page~
+- [x] ~Style login page~
+- [x] ~Style dashboard page~
+- [ ] Style 404 page
+- [ ] Bug testing
+- [ ] Project Complete :)
+
+
