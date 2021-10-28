@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Unauthorized = () => {
   return (
-    <div className='container'>
+    <div className='unauthorized'>
 
-        <h1>403 - You Shall Not Pass</h1>
+        <h1>You don't have permission to this page</h1>
         
    
       <p><Link to='/'>Back to Home</Link></p>

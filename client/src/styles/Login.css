@@ -5,6 +5,13 @@
   font-size: 1rem;
 }
 
+.login header .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
 .login header h1 {
   color: #1A1A1A;
   text-align: center;

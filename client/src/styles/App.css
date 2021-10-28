@@ -5,6 +5,13 @@
   font-size: 1rem;
 }
 
+.signup header .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
 .signup header h1 {
   color: #1A1A1A;
   text-align: center;
@@ -153,6 +160,13 @@
   margin: auto;
   margin-bottom: 3.375rem;
   font-size: 1rem;
+}
+
+.login header .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
 .login header h1 {
@@ -459,7 +473,7 @@
 
 @media screen and (min-width: 990px) {
   .container {
-    width: 50rem;
+    width: 45rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
