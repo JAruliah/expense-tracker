@@ -4,10 +4,9 @@ import Form from "../components/Login/Form";
 
 function Login(props){
     return (
-        <div>
+        <div className="login">
             <Header />
             <Form handleLogin={props.handleLogin}/>
-            <p>Logged in status: {props.logged}</p>
         </div>
     )
 }

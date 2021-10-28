@@ -5,9 +5,8 @@ function Navbar(){
     return (
         <nav>
             <ul>
-                <Link to="/">Login</Link>
-                <Link to="/register">Signup</Link>
-                
+                <li className="login"><Link to="/">Login</Link></li>
+                <li className="signup"><Link to="/register">Signup</Link></li>
             </ul>
         </nav>
     )

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Header from "../components/Dashboard/Header";
 import AddExpense from "../components/Dashboard/AddExpense";
-import Expense from "../components/Dashboard/Expenses";
+import Expense from "../components/Dashboard/Expense";
 
 
 function Dashboard(props){
@@ -24,7 +24,7 @@ function Dashboard(props){
         
 
     return (
-        <div>
+        <div className="dashboard">
             <Header userName={userName} expenses={expenses}/>
             <AddExpense expenses={expenses} setExpenses={setExpenses}/>
             {expenses === undefined ? null : expenses.map(item => {

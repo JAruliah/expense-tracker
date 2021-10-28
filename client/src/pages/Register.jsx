@@ -4,7 +4,7 @@ import Form from "../components/Register/Form";
 
 function Register(){
     return (
-        <div>
+        <div className="signup">
             <Header />
             <Form />
         </div>

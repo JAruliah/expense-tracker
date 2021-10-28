@@ -25,9 +25,10 @@ function AddExpense(props){
 
 
     return(
-        <form onSubmit={submitHandler}>
-            <input placeholder="Value($$$)" type="number" name="value" value={value} onChange={(e) => setValue(e.target.value)} />
-            <input placeholder="Description" type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <form onSubmit={submitHandler} className="add-new-expense">
+            <h4>Use (-) to show expense, and (+) to show income</h4>
+            <input placeholder="Value($$$)" type="number" name="value" value={value} onChange={(e) => setValue(e.target.value)} autoComplete="off" required/>
+            <input placeholder="Description" type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} autoComplete="off"/>
             <button>Submit</button>
         </form>
     )
