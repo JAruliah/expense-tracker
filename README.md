@@ -1,4 +1,5 @@
 # Expense Tracker
+![expense-tracker](https://user-images.githubusercontent.com/71105258/139379492-d6686b37-8886-4beb-acc9-950ea5781476.png)
 
 This is an expense and income tracker, users are able to add and remove expenses and income. Expense totals will be calculated and displayed.
 
@@ -22,6 +23,7 @@ npm install
 cd ../client
 npm install
 ```
+
 
 ### Executing program
 #### Server
