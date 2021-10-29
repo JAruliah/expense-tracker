@@ -37,10 +37,10 @@ function AddExpense(props){
                 }
                 
             }} 
-                autoComplete="off"  maxlength="" required/>
+                autoComplete="off"  maxLength="" required/>
             </label>
             <label>Description
-            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxlength="150" autoComplete="off"/>
+            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="150" autoComplete="off"/>
             </label>
             <button>Submit</button>
         </form>

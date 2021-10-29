@@ -14,12 +14,12 @@ function Form(){
         let re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if ( re.test(email) ) {
-            fetch('https://wheres-my-money-server.herokuapp.com/users/register', {
+            fetch('http://localhost:3001/users/register', {
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({email:email, firstName: firstName, lastName: lastName, password: password})
+                body: JSON.stringify({email:email.toLowerCase(), firstName: firstName, lastName: lastName, password: password})
             })
             .then(response => {
                 setMessage("Account Created")

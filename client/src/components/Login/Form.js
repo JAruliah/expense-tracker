@@ -11,12 +11,12 @@ function Form(props){
         let re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if ( re.test(email) ) {
-            fetch('https://wheres-my-money-server.herokuapp.com/users/login', {
+            fetch('http://localhost:3001/users/login', {
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({email:email, password: password})
+                body: JSON.stringify({email:email.toLowerCase(), password: password})
             })
             .then(response => response.json())
             .then(data => {

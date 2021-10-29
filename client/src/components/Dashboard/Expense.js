@@ -5,7 +5,7 @@ function Expense(props){
     const userId = JSON.parse(localId)
 
     function clickHandler(event){
-        fetch(`https://wheres-my-money-server.herokuapp.com/expenses/${userId._id}`, {
+        fetch(`http://localhost:3001/${userId._id}`, {
             method:'DELETE',
             headers:{
                 'Content-Type': 'application/json'
