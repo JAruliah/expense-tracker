@@ -65,6 +65,7 @@ npm start
 - [x] ~Style dashboard page~
 - [x] ~Style 404 page~
 - [x] ~Bug testing~
-- [x] Project Complete :)
+- [x] Deploy project :)
+- [ ] Create logo
 
 
