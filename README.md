@@ -8,7 +8,7 @@ This is an expense and income tracker, users are able to add and remove expenses
 
 ## Description
 
-Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user will have access to their own expenses and income.
+Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user has access to their own expenses and income.
 
 ## Getting Started
 
@@ -21,6 +21,7 @@ cd server
 npm install
 ```
 #### Client
+* SCSS files need to be compiled
 * to install all client dependencies run:
 ```
 cd ../client
