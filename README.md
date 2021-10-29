@@ -63,8 +63,8 @@ npm start
 - [x] ~Style register page~
 - [x] ~Style login page~
 - [x] ~Style dashboard page~
-- [ ] Style 404 page
-- [ ] Bug testing
-- [ ] Project Complete :)
+- [x] ~Style 404 page~
+- [x] ~Bug testing~
+- [x] Project Complete :)
 
 

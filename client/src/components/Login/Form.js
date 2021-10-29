@@ -11,7 +11,7 @@ function Form(props){
         let re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if ( re.test(email) ) {
-            fetch('http://localhost:3001/users/login', {
+            fetch('https://wheres-my-money-server.herokuapp.com/users/login', {
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'
@@ -46,8 +46,12 @@ function Form(props){
 
     return(
         <form onSubmit={submitHandler}>
-            <input placeholder="Email Address" type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off" required/>
-            <input placeholder="Password" type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="off" required/>
+            <label>Email
+            <input  type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off" required/>
+            </label>
+            <label>Password
+            <input  type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="off" required/>
+            </label>
             <label><input type="checkbox" onClick={clickHandler} />Show Password</label>
             <button>Login</button>
             <p name="message">{message}</p>
