@@ -28,10 +28,19 @@ function AddExpense(props){
         <form onSubmit={submitHandler} className="add-new-expense">
             <h4>Use (-) to show expense, and (+) to show income</h4>
             <label>Value($$$)
-            <input  type="number" name="value" value={value} onChange={(e) => setValue(e.target.value)} autoComplete="off" required/>
+            <input  type="number" name="value" value={value} onChange={(e) => {
+                if (e.target.value > 9999999999){
+                    return
+                }
+                else{
+                    setValue(e.target.value)
+                }
+                
+            }} 
+                autoComplete="off"  maxlength="" required/>
             </label>
             <label>Description
-            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} autoComplete="off"/>
+            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxlength="150" autoComplete="off"/>
             </label>
             <button>Submit</button>
         </form>
