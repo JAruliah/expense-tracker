@@ -5,9 +5,11 @@ function AddExpense(props){
     const [description, setDescription] = useState("")
     const localId = window.localStorage.getItem('id')
     const userId = JSON.parse(localId)
+    const [count, setCount] = useState("")
 
     //On submit POST data to api
     function submitHandler(event){
+          setCount(count + 1)  
           event.preventDefault()
           fetch(`${process.env.REACT_APP_BASE_URL}expenses/${userId._id}`, {
               method:'POST',
@@ -16,12 +18,12 @@ function AddExpense(props){
               },
               body: JSON.stringify({value:value, description: description})
           })
-          .then(response => {
-              window.location.reload()
-            })
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+            props.setExpenses([...props.expenses, {_id:count,value:value, description:description}])
+          })
         .catch(err => console.log(err))
-            
-        
     }
 
 
