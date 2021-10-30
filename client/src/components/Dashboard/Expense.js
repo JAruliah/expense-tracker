@@ -5,7 +5,7 @@ function Expense(props){
     const userId = JSON.parse(localId)
 
     function clickHandler(event){
-        fetch(`http://localhost:3001/${userId._id}`, {
+        fetch(`http://localhost:3001/expenses/${userId._id}`, {
             method:'DELETE',
             headers:{
                 'Content-Type': 'application/json'
@@ -15,6 +15,8 @@ function Expense(props){
         .then(response => { 
             window.location.reload()
         })
+
+        
     }
     
 

@@ -47,10 +47,10 @@ function Form(props){
     return(
         <form onSubmit={submitHandler}>
             <label>Email
-            <input  type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off" required/>
+            <input  type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} maxLength="100" autoComplete="off" required/>
             </label>
             <label>Password
-            <input  type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="off" required/>
+            <input  type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} maxLength="25" autoComplete="off" required/>
             </label>
             <label><input type="checkbox" onClick={clickHandler} />Show Password</label>
             <button>Login</button>

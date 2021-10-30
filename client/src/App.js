@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 import NotFoundPage from './pages/404'
 import ProtectedRoute from "./components/ProtectedRoute";
 import Unauthorized from "./components/Unauthorized";
-import './styles/App.css'
+import './styles/css/App.css'
 
 function App() {
   // Set auth value 
@@ -20,7 +20,6 @@ function App() {
   }
   //function to handle logout
   const handleLogout = e => {
-    e.preventDefault();
     setLogged(false);
     localStorage.removeItem('id');
     window.localStorage.setItem('auth',JSON.stringify(false));
@@ -31,10 +30,13 @@ function App() {
     <div className="container">
       <Router>
         <Switch>
+        <Route exact path="/register">
+          {logged ? <Redirect to="/dashboard" /> :  <Route exact path ="/register" handleLogin={handleLogin} render={props => <Register {...props} handleLogin={handleLogin}/>}/> }
+        </Route>
+
         <Route exact path="/">
           {logged ? <Redirect to="/dashboard" /> :  <Route exact path ="/" handleLogin={handleLogin} render={props => <Login {...props} logged={logged.toString()} handleLogin={handleLogin}/>}/> }
         </Route>
-          <Route exact path ="/register" component ={Register} />
           <ProtectedRoute exact path ="/dashboard" logged={logged} handleLogout={handleLogout} component ={Dashboard} />
           <Route eact path="/404" component={NotFoundPage} />
           <Route exact path='/unauthorized' component={Unauthorized} />

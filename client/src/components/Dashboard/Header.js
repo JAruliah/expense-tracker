@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 
 function Header(props){
@@ -8,7 +9,7 @@ function Header(props){
         // Get values depending on negative or positive, seperate them into expenses and income
         <header>
             <h1>Hey, {props.userName}</h1>
-            <button onClick={props.handleLogout}>Logout</button>
+            <Link to="/" className="logout" onClick={props.handleLogout}>Logout</Link>
             {props.expenses === undefined ? null : props.expenses.map(item => {
             if (item.value === undefined){
                 return false

@@ -5,7 +5,8 @@
             font-size: 2.375rem;
             text-align: left;
         }
-        button{
+        .logout{
+            padding: .5rem;
             font-size: 1rem;
             background-color: $blue;
             color: white;
@@ -16,6 +17,7 @@
             border: none;
             border-radius: 5px;
             box-shadow: 0px 0px 20px 6px rgba(31,84,195,0.13);
+            text-decoration: none;
         }
         .info{
             margin-top: 1.5rem;
@@ -25,10 +27,11 @@
             padding-bottom: 1rem;
             margin-bottom: 3.5rem;
             h2{
-                font-size: 1.125rem;
+                font-size: 1.3rem;
             }
             p{
                 text-align: center;
+                font-size: 1.125rem;
             }
             .income p{
                 color: $green;
@@ -85,6 +88,7 @@
         border: none;
         border-radius: 5px;
         box-shadow: 0px 0px 20px 6px rgba(31,84,195,0.13);
+        padding: 1rem;
         h4, p{
             margin: auto 0;
         }

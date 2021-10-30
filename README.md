@@ -21,7 +21,11 @@ cd server
 npm install
 ```
 #### Client
-* SCSS files need to be compiled
+* SCSS files need to be compiled, you can run:
+```
+cd /client
+npm run scss
+```
 * to install all client dependencies run:
 ```
 cd ../client

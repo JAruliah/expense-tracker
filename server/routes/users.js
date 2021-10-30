@@ -31,7 +31,8 @@ router.post('/register',  async (req,res) => {
         )
         //Save new user into database
         const savedUser = await user.save()
-        res.status(201).send('User created')
+        const userLogged = await Users.find({email: req.body.email,})
+        res.status(201).send({_id: userLogged[0]._id})
     }catch(err){
         res.sendStatus(500)
     }

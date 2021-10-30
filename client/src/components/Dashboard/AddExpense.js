@@ -9,7 +9,7 @@ function AddExpense(props){
     //On submit POST data to api
     function submitHandler(event){
           event.preventDefault()
-          fetch(`https://wheres-my-money-server.herokuapp.com/expenses/${userId._id}`, {
+          fetch(`http:///localhost:3001/expenses/${userId._id}`, {
               method:'POST',
               headers:{
                   'Content-Type': 'application/json'
@@ -20,6 +20,8 @@ function AddExpense(props){
               window.location.reload()
             //   props.setExpenses( () => [...props.expenses, {value:value, description: description}])
             })
+        .catch(err => console.log(err))
+            
         
     }
 
@@ -40,7 +42,7 @@ function AddExpense(props){
                 autoComplete="off"  maxLength="" required/>
             </label>
             <label>Description
-            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="150" autoComplete="off"/>
+            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="80" autoComplete="off"/>
             </label>
             <button>Submit</button>
         </form>

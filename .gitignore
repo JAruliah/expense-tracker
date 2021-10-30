@@ -11,8 +11,8 @@ request.rest
 /client/.pnp.js
 
 #CSS
-/client/src/styles/*.css
-/client/src/styles/*.map
+/client/src/styles/css
+
 
 # testing
 /client/coverage
