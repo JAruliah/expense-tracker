@@ -12,7 +12,7 @@ function Dashboard(props){
             const localId = window.localStorage.getItem('id')
             const userId = JSON.parse(localId)
 
-            fetch(`http://localhost:3001/expenses/${userId._id}`)
+            fetch(`${process.env.REACT_APP_BASE_URL}expenses/${userId._id}`)
             .then(response => response.json())
             .then(data => {
                 setUserName(`${data.firstName}  ${data.lastName}`)

@@ -4,7 +4,9 @@
 request.rest
 
 
-# REACT APP
+# CLIENT
+/client/.env
+
 # dependencies
 /client/node_modules
 /client/.pnp

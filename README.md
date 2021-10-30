@@ -1,7 +1,7 @@
 # Expense Tracker
 ![Screen Shot 2021-10-28 at 11 14 31 PM](https://user-images.githubusercontent.com/71105258/139379609-6c92f23e-dff3-403f-bcf6-11d6a2e63250.png)
 
-### Live Site: https://wheres-my-money-at.netlify.app/
+### Live Site: 
 
 
 This is an expense and income tracker, users are able to add and remove expenses and income. Expense totals will be calculated and displayed.
@@ -21,6 +21,7 @@ cd server
 npm install
 ```
 #### Client
+* .env file must be created in the client folder with REACT_APP_BASE_URL = "your base api route"
 * SCSS files need to be compiled, you can run:
 ```
 cd /client

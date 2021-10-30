@@ -9,7 +9,7 @@ function AddExpense(props){
     //On submit POST data to api
     function submitHandler(event){
           event.preventDefault()
-          fetch(`http:///localhost:3001/expenses/${userId._id}`, {
+          fetch(`${process.env.REACT_APP_BASE_URL}expenses/${userId._id}`, {
               method:'POST',
               headers:{
                   'Content-Type': 'application/json'
@@ -18,7 +18,6 @@ function AddExpense(props){
           })
           .then(response => {
               window.location.reload()
-            //   props.setExpenses( () => [...props.expenses, {value:value, description: description}])
             })
         .catch(err => console.log(err))
             
