@@ -72,10 +72,10 @@ function Form(props){
             <input  type="text" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} maxLength="50" autoComplete="off" required/>
             </label>
             <label>Password
-            <input  type="password" name="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} maxLength="25" required/>
+            <input  type="password" name="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} minLength="8" maxLength="25" required/>
             </label>
             <label>Confirm your password
-            <input  type="password" name="passwordConfirmation" value={passwordConfirmation} id="passwordconfirm" onChange={(e) => setPasswordConfirmation(e.target.value)} maxLength="25" required/>
+            <input  type="password" name="passwordConfirmation" value={passwordConfirmation} id="passwordconfirm" onChange={(e) => setPasswordConfirmation(e.target.value)} minLength="8" maxLength="25" required/>
             </label>
             <label><input type="checkbox" onClick={clickHandler} />Show Passwords</label>
 
