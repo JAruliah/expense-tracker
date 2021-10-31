@@ -3,18 +3,17 @@
 
 ### Live Site: https://expensetracker.jaruliah.me/
 
-
-This is an expense and income tracker, users are able to add and remove expenses and income. Expense totals will be calculated and displayed.
+This is an expense and income tracker
 
 ## Description
 
-Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user has access to their own expenses and income.
+Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user has access to their own expenses and income. Income and expenses can be added through the user as well as edited anytime.
 
 ## Getting Started
 
 ### Installing/Setup
 #### Server 
-* Inside of server folder .env file must be created with contents as follows: DB_CONNECTION="Your database connection"
+* Inside of server folder .env file must be created with contents as follows: DB_CONNECTION="your database connection"
 * to install all server dependencies run:
 ```
 cd server
@@ -77,6 +76,10 @@ npm start
 - [x] ~Style 404 page~
 - [x] ~Bug testing~
 - [x] ~Deploy project :)~
+### Upcoming Features / Updates
 - [ ] Create logo
+- [ ] Add budget tracking
+- [ ] Choose different currency
+-  ?????
 
 

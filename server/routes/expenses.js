@@ -26,7 +26,8 @@ router.post('/:id', async (req,res) => {
     })
     try{
         const userUpdate = await Users.updateOne({_id:mongoose.Types.ObjectId(req.params.id)},{$push:{expenses:expense}})
-        res.json(userUpdate).send
+        const userExpenses = await Users.find({_id:mongoose.Types.ObjectId(req.params.id)})
+        res.json(userExpenses[0].expenses).send
     }catch(err){res.sendStatus(500)}
     
 })
@@ -37,6 +38,11 @@ router.delete('/:id',async (req,res)=>{
         res.json(deletedExpense).send
     }catch(err){res.sendStatus(500)}
     
+})
+
+// Update expense given the expense ID
+router.put('/:id', async (req, res) => {
+
 })
 
 module.exports = router

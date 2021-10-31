@@ -20,8 +20,7 @@ function AddExpense(props){
           })
           .then(response => response.json())
           .then(data => {
-              console.log(data)
-            props.setExpenses([...props.expenses, {_id:count,value:value, description:description}])
+            props.setExpenses([...props.expenses, {_id:data[data.length -1]._id,value:value, description:description}])
           })
         .catch(err => console.log(err))
     }
@@ -29,7 +28,8 @@ function AddExpense(props){
 
     return(
         <form onSubmit={submitHandler} className="add-new-expense">
-            <h4>Use (-) to show expense, and (+) to show income</h4>
+            <h2>Add an expense/income</h2>
+            <h4>Use ( - ) before your input to show expense, leave blank to show income</h4>
             <label>Value($$$)
             <input  type="number" name="value" value={value} onChange={(e) => {
                 if (e.target.value > 9999999999){
@@ -43,7 +43,7 @@ function AddExpense(props){
                 autoComplete="off"  maxLength="" required/>
             </label>
             <label>Description
-            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="80" autoComplete="off"/>
+            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="30" autoComplete="off"/>
             </label>
             <button>Submit</button>
         </form>
