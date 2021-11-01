@@ -13,12 +13,11 @@ router.get('/:id', async(req,res) => {
     res.send({
         firstName: user[0].firstName,
         lastName:user[0].lastName,
-        expenses:user[0].expenses
-            
+        expenses:user[0].expenses 
     })
 })
 
-//Post expense in the user collections given the email in req.body
+//Post expense in the user collections given the userid in req.params
 router.post('/:id', async (req,res) => {
     const expense = new Expenses({
         value:req.body.value,
@@ -41,8 +40,11 @@ router.delete('/:id',async (req,res)=>{
 })
 
 // Update expense given the expense ID
-router.put('/:id', async (req, res) => {
-
+router.patch('/:id', async (req, res) => {
+    try{
+        const userExpenses = await Users.updateOne({"expenses._id":mongoose.Types.ObjectId(req.body._id)},{$set: {"expenses.$.value":`${req.body.value}`, "expenses.$.description":`${req.body.description}`}} )
+        res.json().send
+    }catch(err){res.sendStatus(500)}
 })
 
 module.exports = router

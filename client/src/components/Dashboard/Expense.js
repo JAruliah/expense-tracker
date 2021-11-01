@@ -26,6 +26,16 @@ function Expense(props){
     function editHandler(event){
         if (edit === true){
             console.log('update database')
+            fetch(`${process.env.REACT_APP_BASE_URL}expenses/${userId._id}`, {
+                method:'PATCH',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({_id:props.expenseId, value:value, description:description})  
+            })
+            .then(response => console.log(response))
+
+            .catch(err => console.log(err))
             setEdit(!edit)
         }
         else{
