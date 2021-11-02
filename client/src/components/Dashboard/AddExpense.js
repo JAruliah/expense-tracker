@@ -31,19 +31,11 @@ function AddExpense(props){
             <h2>Add an expense/income</h2>
             <h4>Use ( - ) before your input to show expense, leave blank to show income</h4>
             <label>Value($$$)
-            <input  type="number" name="value" value={value} onChange={(e) => {
-                if (e.target.value > 9999999999){
-                    return
-                }
-                else{
-                    setValue(e.target.value)
-                }
-                
-            }} 
-                autoComplete="off"  maxLength="" required/>
+            <input  type="number" name="value" value={value} min="-999999" max="999999" onChange={(e) => {setValue(e.target.value)}} 
+                autoComplete="off" required/>
             </label>
             <label>Description
-            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="30" autoComplete="off"/>
+            <input  type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength="30" required autoComplete="off"/>
             </label>
             <button>Submit</button>
         </form>

@@ -16,4 +16,16 @@
     .container{
         width: 45rem;
     }
+    .dashboard{
+        .info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid rgba(26, 26, 26, 0.2);
+            div{
+                border: none !important;
+                margin-bottom: 0 !important;
+            }
+        
+        }
+    }
   }
