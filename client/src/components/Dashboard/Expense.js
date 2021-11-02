@@ -26,7 +26,6 @@ function Expense(props){
     function editHandler(event){
         event.preventDefault()
         if (edit === true){
-            console.log('update database')
             fetch(`${process.env.REACT_APP_BASE_URL}expenses/${userId._id}`, {
                 method:'PATCH',
                 headers:{
