@@ -59,7 +59,7 @@ function Expense(props){
     return (
         <div className="expense">
             <form onSubmit={editHandler} className="edit-form">
-                {edit === true? <input value={value} className="edit-field" type="number" min="-999999" max="999999" onChange={(event) => {setValue(event.target.value)}} required/> :value < 0? <h4 style={{color:'#FF4B4B'}}>${value}</h4>:<h4 style={{color:'#00AD35'}}>${value}</h4>}
+                {edit === true? <input value={value} className="edit-field" type="number" min="-999999" max="999999" onChange={(event) => {setValue(event.target.value)}} required/> :value < 0? <h4 style={{color:'#FF4B4B'}}>-${Math.abs(value)}</h4>:<h4 style={{color:'#00AD35'}}>${Math.abs(value)}</h4>}
                 {edit === true? <input className="edit-field" value={description} type="text" maxLength="30" onChange={(event) => {setDescription(event.target.value)}} /> :<p>{description}</p>}
                 {edit === false? <button className="edit" type="submit" >Edit</button> :<button className="save-edit" type="submit" >Save</button> }    
             </form>
