@@ -37,7 +37,7 @@ function Expense(props){
             .then(response => {
                 let updatedExpenses = props.expenses.map(item => 
                 {
-                if (item._id == props.expenseId){
+                if (item._id === props.expenseId){
                     return {...item, _id:props.expenseId, value: value, description:description};
                 }
                     return item; 
