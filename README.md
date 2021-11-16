@@ -7,7 +7,14 @@ This is an expense and income tracker
 
 ## Description
 
-Project was made using the MERN stack. Users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user has access to their own expenses and income. Income and expenses can be added through the user as well as edited anytime.
+In this project users will be able to register and login. Authentication is setup using bcrypt to hash passwords for added security. Each user has access to their own expenses and income. Income and expenses can be added through the user as well as edited anytime.
+
+## Built With
+- React
+- Nodejs
+- Express
+- MongoDB
+- SCSS
 
 ## Getting Started
 
