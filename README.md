@@ -15,6 +15,7 @@ In this project users will be able to register and login. Authentication is setu
 - Express
 - MongoDB
 - SCSS
+- Hosted on NGINX VPS
 
 ## Getting Started
 
