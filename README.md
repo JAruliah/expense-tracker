@@ -1,5 +1,5 @@
 # Expense Tracker
-![Screen Shot 2021-11-01 at 9 18 06 PM](https://user-images.githubusercontent.com/71105258/139781549-fdfec41d-d0c7-4782-b073-a8707277f9a2.png)
+![expense-tracker](https://user-images.githubusercontent.com/71105258/144943964-b5331125-6165-4b28-8ac2-7e2e3504c8c0.gif)
 
 ### Live Site: https://expensetracker.jaruliah.me/
 
